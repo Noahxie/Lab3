@@ -33,14 +33,22 @@ def bubble_sort(arr, sorting_order):
                 else:
                     # Return an empty array
                     arr_result = []
-    else:
-        arr_result = -1
+
+    if n>10:
+        return 1
+    
+    if n == 0:
+        return 0
+    
+    for num in arr_result:
+        if not isinstance(num, int):
+            return 2
 
     return arr_result
 
 def main():
     # Driver code to test above
-    arr = [64, 34, 25, 12, 22, 11, 90]
+    arr = [64, 34, 25, 12, 22, 11, 90, 1, 2, 3, 4]
 
     # Sort in ascending order
     result = bubble_sort(arr, SORT_ASCENDING)
